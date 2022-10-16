@@ -1,3 +1,4 @@
+//eslint-disable-next-line 
 import React, { useState } from "react";
 import boar from "../boards.js";
 import Board from "./Board";

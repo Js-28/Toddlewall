@@ -2,6 +2,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import DeleteIcon from "@material-ui/icons/Delete";
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 
 function Posted(props) {
@@ -26,10 +27,10 @@ function Posted(props) {
 			        <div className="bottom">
 			          <p className="info">{props.img}</p>
 			          <p className="info">{props.content}</p>
-			          <button onClick={handleClick}>
+			          <button onClick={handleClick} className="dbuttons">
 			          	<DeleteIcon />
 			          </button>
-			          <button onClick={handleLike}>DELETE</button>
+			          <button onClick={handleLike} className="buttons"><FavoriteBorderIcon /></button>
 			    </div>
 			   
 			</div>

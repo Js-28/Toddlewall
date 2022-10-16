@@ -22,7 +22,7 @@ function Board(props) {
 			        <div className="bottom">
 			          <p className="info">{props.color}</p>
 			          {/*<p className="info">{props.post}</p>*/}
-			          <button onClick={handleClick}>
+			          <button onClick={handleClick} className="dbuttons">
 			          <DeleteIcon />
 			          </button>
 			    </div>
