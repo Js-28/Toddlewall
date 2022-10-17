@@ -1,7 +1,7 @@
 //eslint-disable-next-line 
 import React,{ useState } from "react";
 
-import HighlightIcon from "@material-ui/icons/Highlight";
+// import HighlightIcon from "@material-ui/icons/Highlight";
 import AddIcon from "@material-ui/icons/Add";
 import Modal from 'react-modal';
 
@@ -18,29 +18,28 @@ function Createpost(props) {
 
   });
   const [title,setTitle]=useState("");
-  const [image,setImg]=useState("");
+  // const [image,setImg]=useState("");
   const [cont,setCont]=useState("");
 
-  let selectedcolor;
+  // let selectedcolor;
   function handleChange(event) {
-    const { name, value } = event.target;
+    
     setTitle(event.target.value);
   }
-   function handleImg(event) {
-    const { name, value } = event.target;
-    setImg(event.target.value);
-  }
+  //  function handleImg(event) {
+  //   const { name, value } = event.target;
+  //   setImg(event.target.value);
+  // }
   function handleCont(event) {
-    const { name, value } = event.target;
+    // const { name, value } = event.target;
     setCont(event.target.value);
   }
 
   function submitBoard(event) {
     event.preventDefault();
-    // console.log(post);
+    console.log(post);
     setPost({
       name: title,
-      img:image,
       content:cont
     });
     props.addWall(post);
@@ -54,7 +53,7 @@ function Createpost(props) {
       <div>
       <button variant="outlined" className="btn btn-light" onClick={() => setModalIsOpen(true)}>
       <AddIcon className="add-button" />
-        Create New Post
+        Create New {props.buttonType}
       </button>
       </div>
     
@@ -89,23 +88,23 @@ function Createpost(props) {
         
       >
           <form>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Add Name For Your Board</label><br></br>
-      <input type="text" class="form-control boardname" id="exampleInputEmail1" aria-describedby="emailHelp" name="name"
+    <div className="form-group">
+      <label htmlFor="exampleInputEmail1">Add Name For Your Board</label><br></br>
+      <input type="text" className="form-control boardname" id="exampleInputEmail1" aria-describedby="emailHelp" name="name"
           onChange={handleChange}
           value={title}
           placeholder="Title"></input>
     </div><br></br>
-    <div >
-    <label for="color-palette">Select Image</label><br></br>
-      <input type="file"  onClick={handleImg} id="color-palette" class="form-control boardname" />
-    </div><br></br>
+    {/*<div >
+    <label htmlFor="color-palette">Select Image</label><br></br>
+      <input type="file"  onClick={handleImg} id="color-palette" className="form-control boardname" />
+    </div><br></br>*/}
     <div>
-    <label for="color-palette">What's On Your Mind</label><br></br>
-      <input type="text"  onClick={handleCont} id="content" class="form-control boardname" placeholder="Content" />
+    <label htmlFor="color-palette">What's On Your Mind</label><br></br>
+      <input type="text"  onClick={handleCont} id="content" className="form-control boardname" placeholder="Content" />
     </div><br></br>
-      <button type="submit" class="btn btn-primary" onClick={submitBoard}>Submit</button>
-      <button class="btn btn-primary modal-btn" onClick={() => setModalIsOpen(false)}>Close</button>
+      <button type="submit" className="btn btn-primary" onClick={submitBoard}>Submit</button>
+      <button className="btn btn-primary modal-btn" onClick={() => setModalIsOpen(false)}>Close</button>
   </form>
         
       </Modal>

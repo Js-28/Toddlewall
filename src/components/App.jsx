@@ -1,10 +1,10 @@
 //eslint-disable-next-line 
 import React, { useState } from "react";
-import Header from "./Header";
+// import Header from "./Header";
 import Footer from "./Footer";
 import boar from "../boards.js";
-import Board from "./Board";
-import {BrowserRouter as Router,Routes,Route,Link,useRouteMatch,useParams} from "react-router-dom";
+// import Board from "./Board";
+import {Routes,Route} from "react-router-dom";
 import Posts from "./posts";
 import Appboard from "./appboard";
 

@@ -1,10 +1,10 @@
 //eslint-disable-next-line 
 import React,{ useState } from "react";
 
-import HighlightIcon from "@material-ui/icons/Highlight";
+// import HighlightIcon from "@material-ui/icons/Highlight";
 import AddIcon from "@material-ui/icons/Add";
 import Modal from 'react-modal';
-import Createpost from './Createpost';
+// import Createpost from './Createpost';
 
 Modal.setAppElement('#root');
 function Createwall(props) {
@@ -19,9 +19,9 @@ function Createwall(props) {
   const [title,setTitle]=useState("");
   const [color,setColor]=useState("");
 
-  let selectedcolor;
+  // let selectedcolor;
   function handleChange(event) {
-    const { name, value } = event.target;
+    // const { name, value } = event.target;
     setTitle(event.target.value);
   }
 

@@ -1,8 +1,8 @@
 //eslint-disable-next-line 
 import React from "react";
 
-import HighlightIcon from "@material-ui/icons/Highlight";
-import AddIcon from "@material-ui/icons/Add";
+// import HighlightIcon from "@material-ui/icons/Highlight";
+// import AddIcon from "@material-ui/icons/Add";
 
 function Search() {
   return (

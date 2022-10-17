@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import boar from "../boards.js";
+
 import pos from "../posts.js";
 import Posted from "./Posted";
-import {BrowserRouter as Router,Routes,Route,Link,useRouteMatch,useParams} from "react-router-dom";
+
 
 function Post() {
   const [posts, setPosts] = useState(pos);
@@ -18,7 +18,7 @@ function Post() {
 
   function deletePost(id) {
     setPosts(prevPosts => {
-      return prevPosts.filter((noteItem, index) => {
+      return prevPosts.filter((boardItem, index) => {
         return index !== id;
       });
     });
